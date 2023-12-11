@@ -2,7 +2,7 @@
 function selectUsers() {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("SELECT user_id, user_name, user_password FROM `user` ");
+        $stmt = $conn->prepare("SELECT user_id, username, password FROM `users` ");
         $stmt->execute();
         $result = $stmt->get_result();
         $conn->close();
@@ -16,7 +16,7 @@ function selectUsers() {
 function insertUser($uName, $uPassword) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `user` (`user_name`, `user_password`) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `users` (`user_name`, `user_password`) VALUES (?, ?)");
         $stmt->bind_param("ss", $uName, $uPassword);
         $success = $stmt->execute();
         $conn->close();
@@ -30,7 +30,7 @@ function insertUser($uName, $uPassword) {
 function updateUser($uName, $uPassword, $uid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("UPDATE `user` SET `user_name` = ?, `user_password` = ? WHERE `user_id` = ?");
+        $stmt = $conn->prepare("UPDATE `users` SET `username` = ?, `password` = ? WHERE `user_id` = ?");
         $stmt->bind_param("ssi", $uName, $uPassword, $uid);
         $success = $stmt->execute();
         $conn->close();
@@ -45,7 +45,7 @@ function updateUser($uName, $uPassword, $uid) {
 function deleteUser($uid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("DELETE FROM user WHERE `user`.`user_id` = ?");
+        $stmt = $conn->prepare("DELETE FROM users WHERE `user`.`user_id` = ?");
         $stmt->bind_param("i", $uid);
         $success = $stmt->execute();
         $conn->close();
