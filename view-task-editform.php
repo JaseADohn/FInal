@@ -21,6 +21,14 @@
               <label for="tName <?php echo $task['task_id']; ?>" class="form-label">Task Name</label>
               <input type="text" class="form-control" id="tName<?php echo $task['task_id']; ?>" name="tName" value="<?php echo $task['task_name']; ?>">
             </div>
+            <div class="mb-3">
+              <label for="tName <?php echo $task['task_id']; ?>" class="form-label">Task Name</label>
+              <input type="text" class="form-control" id="desc<?php echo $task['description']; ?>" name="desc" value="<?php echo $task['description']; ?>">
+            </div>
+            <div class="mb-3">
+              <label for="tName <?php echo $task['task_id']; ?>" class="form-label">Task Name</label>
+              <input type="text" class="form-control" id="prio<?php echo $task['priority']; ?>" name="prio" value="<?php echo $task['priority']; ?>">
+            </div>
                 <input type="hidden" name="tid" value="<?php echo $task['task_id']; ?>">
                 <input type="hidden" name="actionType" value="Edit">
             <button type="submit" class="btn btn-primary">Save</button>
