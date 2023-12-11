@@ -1,43 +1,4 @@
-<script>
-    function openEditModal(userId) {
-        var userName = "<?php echo $user['username']; ?>";
-        var userPassword = "<?php echo $user['password']; ?>";
-
-        document.getElementById('editUserModalLabel').innerText = 'Edit User';
-        document.getElementById('uName').value = userName;
-        document.getElementById('uPassword').value = userPassword;
-        document.getElementById('uid').value = userId;
-
-        $('#editUserModal').modal({
-            backdrop: false
-        });
-    }
-
-   function confirmDelete() {
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#3085d6',
-            confirmButtonText: 'Yes, delete it!'
-        }).then((result) => {
-            return result.isConfirmed;
-        });
-    }
-
-     function animateCard(card, scale) {
-            anime({
-                targets: card,
-                scale: scale,
-                duration: 300,
-                easing: 'easeInOutQuad'
-            });
-                    }
-
-</script>
-
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.0"></script>
 <div class="row">
     <div class="col">
         <style>
@@ -124,4 +85,44 @@
         </div>
     <?php } ?>
 </div>
+
+<script>
+    function openEditModal(userId) {
+        var userName = "<?php echo $user['username']; ?>";
+        var userPassword = "<?php echo $user['password']; ?>";
+
+        document.getElementById('editUserModalLabel').innerText = 'Edit User';
+        document.getElementById('uName').value = userName;
+        document.getElementById('uPassword').value = userPassword;
+        document.getElementById('uid').value = userId;
+
+        $('#editUserModal').modal({
+            backdrop: false
+        });
+    }
+
+   function confirmDelete() {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            return result.isConfirmed;
+        });
+    }
+
+     function animateCard(card, scale) {
+            anime({
+                targets: card,
+                scale: scale,
+                duration: 300,
+                easing: 'easeInOutQuad'
+            });
+                    }
+
+</script>
 
