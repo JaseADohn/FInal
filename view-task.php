@@ -16,7 +16,7 @@
       <th>Name</th>
         <th>Description</th>
         <th>Priority</th>
-      <th>Category ID</th>
+      <th>User ID</th>
       <th></th>
       </tr>
     </thead>
