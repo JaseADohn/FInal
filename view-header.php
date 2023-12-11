@@ -22,28 +22,30 @@
         .navbar-nav .nav-link {
             color: #333;
         }
-        .card {
-            width: 18rem;
-            margin-bottom: 20px;
-        }
+         .user-card {
+                background-color: rgba(255, 255, 255, 0.8);
+                margin: 20px;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
 
-        .card-body {
-            background-color: #fff;
-            padding: 1.25rem;
-            border-radius: 0.25rem;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+            footer {
+                margin-top: 20px;
+                text-align: center;
+                color: #fff;
+            }
+            .custom-card {
+                background-color: #f8f9fa; 
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                margin-bottom: 20px;
+            }
 
-        .card-title,
-        .card-subtitle,
-        .card-text {
-            color: #333;
-        }
-
-        .btn-info {
-            text-decoration: none;
-        }
+            .card-body {
+                padding: 20px;
+            }
     </style>
 </head>
 
