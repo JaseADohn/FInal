@@ -23,11 +23,11 @@
               <input type="text" class="form-control" id="tName<?php echo $task['task_id']; ?>" name="tName" value="<?php echo $task['task_name']; ?>">
             </div>
             <div class="mb-3">
-              <label for="tName <?php echo $task['task_id']; ?>" class="form-label">Task Name</label>
+              <label for="tName <?php echo $task['task_id']; ?>" class="form-label">Description</label>
               <input type="text" class="form-control" id="desc<?php echo $task['description']; ?>" name="desc" value="<?php echo $task['description']; ?>">
             </div>
             <div class="mb-3">
-              <label for="tName <?php echo $task['task_id']; ?>" class="form-label">Task Name</label>
+              <label for="tName <?php echo $task['task_id']; ?>" class="form-label">Priority</label>
               <input type="text" class="form-control" id="prio<?php echo $task['priority']; ?>" name="prio" value="<?php echo $task['priority']; ?>">
             </div>
               <div class="mb-3">
