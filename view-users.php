@@ -55,7 +55,7 @@ while ($user = $users->fetch_assoc()) {
       <h5 class="card-title">User ID: <?php echo $user['user_id']; ?></h5>
       <h6 class="card-subtitle mb-2 text-muted">Username: <?php echo $user['username']; ?></h6>
       <p class="card-text">Password: <?php echo $user['password']; ?></p>
-      <a href="products-by-user.php?id=<?php echo $user['user_id']; ?>" class="card-link">Products</a>
+      <a href="tasks-by-user.php?id=<?php echo $user['user_id']; ?>" class="card-link">Tasks</a>
 
       <div class="card-link">
         <?php include "view-user-editform.php"; ?>
