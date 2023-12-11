@@ -27,7 +27,7 @@ while ($user = $users->fetch_assoc()) {
   <tr>
     <td><?php echo $user['user_id']; ?></td>
     <td><?php echo $user['username']; ?></td>
-    <td><?php echo $user['userpassword']; ?></td>
+    <td><?php echo $user['password']; ?></td>
     <td><a href ="products-by-user.php?id=<?php echo $user['user_id']; ?>">Products</a></td>
     <td>
     <?php
