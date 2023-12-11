@@ -16,7 +16,7 @@ function selectUsers() {
 function insertUser($uName, $uPassword) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `users` (`user_name`, `user_password`) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `users` (`username`, `password`) VALUES (?, ?)");
         $stmt->bind_param("ss", $uName, $uPassword);
         $success = $stmt->execute();
         $conn->close();
