@@ -21,20 +21,30 @@
             border-radius: 8px;
         }
 
-      .user-card {
-            background-color: rgba(255, 255, 255, 0.8);
-            margin: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+       .user-card {
+                background-color: rgba(255, 255, 255, 0.8);
+                margin: 20px;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
 
-        footer {
-            margin-top: 20px;
-            text-align: center;
-            color: #fff;
-        }
+            footer {
+                margin-top: 20px;
+                text-align: center;
+                color: #fff;
+            }
+            .custom-card {
+                background-color: #f8f9fa; 
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                margin-bottom: 20px;
+            }
+
+            .card-body {
+                padding: 20px;
+            }
         </style>
         <h1>Users</h1>
     </div>
