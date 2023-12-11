@@ -64,9 +64,7 @@
                     <p class="card-text">Password: <?php echo $user['password']; ?></p>
                     <a href="tasks-by-user.php?id=<?php echo $user['user_id']; ?>" class="btn btn-info" style="text-decoration: none;">View Tasks</a>
 
-                    <div class="card-link">
-                        <?php include "view-user-editform.php"; ?>
-                    </div>
+                    
 
                     <form method="post" action="" onsubmit="return confirmDelete();">
                         <input type="hidden" name="uid" value="<?php echo $user['user_id']; ?>">
@@ -83,6 +81,7 @@
             </div>
         </div>
     <?php } ?>
+<?php include "view-user-editform.php"; ?>
 </div>
 
 <script>
