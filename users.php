@@ -9,9 +9,18 @@ if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
     case "Add":
       if (insertUser($_POST['uName'], $_POST['uPassword'])) {
-          echo '<div class="alert alert-success" role="alert"> User added </div>';
-        } 
-        break;
+                echo '<script>
+                        Swal.fire({
+                            icon: "success",
+                            title: "User Created!",
+                            showConfirmButton: false,
+                            timer: 1500
+                        }).    then(function() {
+                            location.reload(); // Refresh the page or do any other action
+                        });
+                      </script>';
+            }
+            break;
         case "Edit":
       if (updateUser($_POST['uName'], $_POST['uPassword'], $_POST['uid'])) {
           echo '<div class="alert alert-success" role="alert"> User Edited </div>';
