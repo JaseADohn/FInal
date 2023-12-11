@@ -25,6 +25,7 @@
             </div>
                 <input type="hidden" name="actionType" value="Add">
             <button type="submit" class="btn btn-primary">Save</button>
+            <input type="hidden" name="formSubmitted" value="false">
         </form>
       </div>
     </div>
