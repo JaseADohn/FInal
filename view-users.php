@@ -36,8 +36,8 @@
   </div>
 </div>
 <div class="table-responsive">
-  <table class="table">
-    <thead>
+    <table class="table">
+    /*<thead>
       <tr>
       <th>ID</th>
       <th>Name</th>
@@ -45,7 +45,7 @@
       <th></th>
       <th></th>
       <th></th>
-      </tr>
+      </tr> */
     </thead>
     <tbody>
 <?php
