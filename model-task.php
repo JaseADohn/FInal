@@ -27,11 +27,11 @@ function selectUserForInput() {
     }
 }
 
-function insertTask($tName, $uid, $desc, $prio) {
+function updateTask($tName, $desc, $prio, $tid) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `task` (`task_name`, `user_id`, `description`, `priority`) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("sisi", $tName, $uid, $desc, $prio);
+        $stmt = $conn->prepare("UPDATE `task` SET `task_name` = ?, `description` = ?, `priority` = ? WHERE `task_id` = ?");
+        $stmt->bind_param("ssii", $tName, $desc, $prio, $tid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
@@ -40,6 +40,7 @@ function insertTask($tName, $uid, $desc, $prio) {
         throw $e;
     }
 }
+
 
 
 function updateTask($tName, $tid) {
