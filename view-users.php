@@ -87,6 +87,16 @@
 </div>
 
 <script>
+
+    function animateCard(card, scale) {
+            anime({
+                targets: card,
+                scale: scale,
+                duration: 300,
+                easing: 'easeInOutQuad'
+            });
+                    }
+    
     function openEditModal(userId) {
         var userName = "<?php echo $user['username']; ?>";
         var userPassword = "<?php echo $user['password']; ?>";
@@ -115,14 +125,6 @@
         });
     }
 
-     function animateCard(card, scale) {
-            anime({
-                targets: card,
-                scale: scale,
-                duration: 300,
-                easing: 'easeInOutQuad'
-            });
-                    }
 
 </script>
 
