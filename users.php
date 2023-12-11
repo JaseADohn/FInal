@@ -19,6 +19,7 @@ if (isset($_POST['actionType'])) {
                             location.reload(); // Refresh the page or do any other action
                         });
                       </script>';
+                echo '<input type="hidden" name="formSubmitted" value="true">';
             }
             break;
         case "Edit":
