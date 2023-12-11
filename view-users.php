@@ -37,16 +37,6 @@
 </div>
 <div class="table-responsive">
     <table class="table">
-    /*<thead>
-      <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Password</th>
-      <th></th>
-      <th></th>
-      <th></th>
-      </tr> */
-    </thead>
     <tbody>
 <?php
 while ($user = $users->fetch_assoc()) {
