@@ -115,11 +115,12 @@
     }
 
      function animateCard(card, scale) {
-                        anime({
-                            targets: card,
-                            scale: scale, 
-                            duration: 300, 
-                            easing: 'easeInOutQuad' 
-                                });
-                }
+            anime({
+                targets: card,
+                scale: scale,
+                duration: 300,
+                easing: 'easeInOutQuad'
+            });
+                    }
+
 </script>
