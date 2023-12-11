@@ -22,6 +22,13 @@
         .navbar-nav .nav-link {
             color: #333;
         }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin: 20px -10px;
+        }
          .user-card {
                 background-color: rgba(255, 255, 255, 0.8);
                 margin: 20px;
