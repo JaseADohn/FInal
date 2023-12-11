@@ -85,13 +85,6 @@
     <?php } ?>
 </div>
 
-            <?php
-            }
-            ?>
-        </tbody>
-    </table>
-</div>
-
 <script>
     function confirmDelete() {
         return confirm("Are you sure you want to delete?");
