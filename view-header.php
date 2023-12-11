@@ -22,6 +22,28 @@
         .navbar-nav .nav-link {
             color: #333;
         }
+        .card {
+            width: 18rem;
+            margin-bottom: 20px;
+        }
+
+        .card-body {
+            background-color: #fff;
+            padding: 1.25rem;
+            border-radius: 0.25rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .card-title,
+        .card-subtitle,
+        .card-text {
+            color: #333;
+        }
+
+        .btn-info {
+            text-decoration: none;
+        }
     </style>
 </head>
 
