@@ -53,7 +53,7 @@
     </div>
 </div>
 
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<div class="row row-cols-1 g-4">
     <?php while ($task = $tasks->fetch_assoc()) { ?>
         <div class="col">
             <div class="card custom-card" onmouseover="animateCard(this, 1.1)" onmouseout="animateCard(this, 1)">
