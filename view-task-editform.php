@@ -29,6 +29,14 @@
               <label for="tName <?php echo $task['task_id']; ?>" class="form-label">Task Name</label>
               <input type="text" class="form-control" id="prio<?php echo $task['priority']; ?>" name="prio" value="<?php echo $task['priority']; ?>">
             </div>
+              <div class="mb-3">
+              <label for="uid" class="form-label">User ID</label>
+<?php
+$userList = selectUserForInput();
+include "view-user-input-list.php";
+
+?>
+            </div>
                 <input type="hidden" name="tid" value="<?php echo $task['task_id']; ?>">
                 <input type="hidden" name="actionType" value="Edit">
             <button type="submit" class="btn btn-primary">Save</button>
