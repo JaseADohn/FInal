@@ -30,7 +30,7 @@ function selectUserForInput() {
 function insertTask($tName, $uid, $desc, $prio) {
     try {
         $conn = get_db_connection();
-        $stmt = $conn->prepare("INSERT INTO `task` (`task_name`, `user_id`, 'description', 'priority') VALUES (?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO `task` (`task_name`, `user_id`, `description`, `priority`) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("sisi", $tName, $uid, $desc, $prio);
         $success = $stmt->execute();
         $conn->close();
@@ -40,6 +40,7 @@ function insertTask($tName, $uid, $desc, $prio) {
         throw $e;
     }
 }
+
 
 function updateTask($tName, $tid) {
     try {
