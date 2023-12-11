@@ -86,6 +86,18 @@
 </div>
 
 <script>
+    function openEditModal(userId) {
+        var userName = "<?php echo $user['username']; ?>";
+        var userPassword = "<?php echo $user['password']; ?>";
+
+        document.getElementById('editUserModalLabel').innerText = 'Edit User';
+        document.getElementById('uName').value = userName;
+        document.getElementById('uPassword').value = userPassword;
+        document.getElementById('uid').value = userId;
+
+        $('#editUserModal').modal('show');
+    }
+
     function confirmDelete() {
         return confirm("Are you sure you want to delete?");
     }
