@@ -72,12 +72,6 @@ while ($task = $tasks->fetch_assoc()) {
     ?>
     </td>
     <td>
-      <form method="post" action="user-by-task.php">
-  <input type="hidden" name="tid" value="<?php echo $task['user_id']; ?>">
-  <button type="category" class="btn btn-primary">User</button>
-      </form>
-  </td>
-    <td>
       <form method="post" action="">
   <input type="hidden" name="tid" value="<?php echo $task['task_id']; ?>">
   <input type = "hidden" name = "actionType" value = "Delete">
