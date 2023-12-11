@@ -42,9 +42,6 @@
 while ($user = $users->fetch_assoc()) {
 ?>
   <div class="card" style="width: 18rem; margin-bottom: 20px;">
-    <!-- Generic user avatar image -->
-    <img src="generic-user-avatar.png" class="card-img-top" alt="Generic User Avatar">
-
     <div class="card-body">
       <h5 class="card-title">User ID: <?php echo $user['user_id']; ?></h5>
       <h6 class="card-subtitle mb-2 text-muted">Username: <?php echo $user['username']; ?></h6>
