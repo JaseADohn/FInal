@@ -24,7 +24,7 @@ if (isset($_POST['actionType'])) {
     }
 }
 
-$products = selectTask();
+$tasks = selectTask();
 include "view-task.php";
 
 include "view-footer.php";
