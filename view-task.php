@@ -35,6 +35,16 @@
                 text-align: center;
                 color: #fff;
             }
+            .custom-card {
+                background-color: #f8f9fa; /* Set your desired background color */
+                border: 1px solid #dee2e6;
+                border-radius: 8px;
+                margin-bottom: 20px;
+            }
+
+            .card-body {
+                padding: 20px;
+            }
         </style>
         <h1>Tasks</h1>
     </div>
@@ -46,10 +56,10 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <?php while ($task = $tasks->fetch_assoc()) { ?>
         <div class="col">
-            <div class="card">
+            <div class="card custom-card">
                 <div class="card-body">
                     <h5 class="card-title">Task ID: <?php echo $task['task_id']; ?></h5>
-                    <p class="card-text">Name: <?php echo $task['task_name']; ?></p>
+                    <h6 class="card-subtitle mb-2 text-muted">Name: <?php echo $task['task_name']; ?></h6>
                     <p class="card-text">Description: <?php echo $task['description']; ?></p>
                     <p class="card-text">Priority: <?php echo $task['priority']; ?></p>
                     <p class="card-text">User ID: <?php echo $task['user_id']; ?></p>
@@ -59,19 +69,15 @@
                     <form method="post" action="" onsubmit="return confirmDelete();">
                         <input type="hidden" name="tid" value="<?php echo $task['task_id']; ?>">
                         <input type="hidden" name="actionType" value="Delete">
-                        <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?');">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-trash" viewBox="0 0 16 16">
-                                <path
-                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
-                                <path
-                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
-                            </svg
-                          </button>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </div>
+                        <button type="submit" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z" />
+                                <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z" />
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     <?php } ?>
 </div>
