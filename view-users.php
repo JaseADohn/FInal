@@ -50,15 +50,15 @@
             <?php
             while ($user = $users->fetch_assoc()) {
             ?>
-                <div class="card" style="width: 18rem; margin-bottom: 20px;">
+                <div class="card hover-card" style="width: 18rem; margin-bottom: 20px;" onmouseover="animateCard(this, 1.1)" onmouseout="animateCard(this, 1)">
                     <div class="card-body">
                         <h5 class="card-title">User ID: <?php echo $user['user_id']; ?></h5>
                         <h6 class="card-subtitle mb-2 text-muted">Username: <?php echo $user['username']; ?></h6>
                         <p class="card-text">Password: <?php echo $user['password']; ?></p>
                         <a href="tasks-by-user.php?id=<?php echo $user['user_id']; ?>" class="btn btn-info" style="text-decoration: none;">View Tasks</a>
-                  
+
                         <div class="card-link">
-                          <?php include "view-user-editform.php"; ?>
+                            <?php include "view-user-editform.php"; ?>
                         </div>
 
                         <form method="post" action="" onsubmit="return confirmDelete();">
@@ -85,4 +85,13 @@
     function confirmDelete() {
         return confirm("Are you sure you want to delete?");
     }
+
+     function animateCard(card, scale) {
+                        anime({
+                            targets: card,
+                            scale: scale, 
+                            duration: 300, 
+                            easing: 'easeInOutQuad' 
+                                });
+                }
 </script>
