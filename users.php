@@ -15,6 +15,37 @@ if (isset($_POST['actionType'])) {
                             <span aria-hidden="true">&times;</span>
                         </button>
                       </div>';
+
+                echo '<script src="path/to/anime.js"></script>';
+
+                echo '<script>
+                        var popUp = document.createElement("div");
+                        popUp.innerHTML = "User added!";
+                        popUp.classList.add("popup");
+                        document.body.appendChild(popUp);
+
+                        anime({
+                            targets: ".popup",
+                            opacity: [0, 1],
+                            translateY: [50, 0],
+                            duration: 500,
+                            easing: "easeInOutQuad",
+                            delay: 200
+                        });
+
+                        setTimeout(function() {
+                            anime({
+                                targets: ".popup",
+                                opacity: [1, 0],
+                                translateY: [0, -50],
+                                duration: 500,
+                                easing: "easeInOutQuad",
+                                complete: function(anim) {
+                                    document.body.removeChild(popUp);
+                                }
+                            });
+                        }, 3000);
+                    </script>';
             }
             break;
         case "Edit":
