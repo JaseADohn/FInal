@@ -9,12 +9,6 @@ if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
         case "Add":
             if (insertUser($_POST['uName'], $_POST['uPassword'])) {
-               echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-                        User added
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>';
 
                 echo '<script src="path/to/anime.js"></script>';
 
@@ -27,7 +21,7 @@ if (isset($_POST['actionType'])) {
                         anime({
                             targets: ".popup",
                             opacity: [0, 1],
-                            translateY: [50, 0],
+                            translateY: [-100, 0],
                             duration: 500,
                             easing: "easeInOutQuad",
                             delay: 200
@@ -37,7 +31,7 @@ if (isset($_POST['actionType'])) {
                             anime({
                                 targets: ".popup",
                                 opacity: [1, 0],
-                                translateY: [0, -50],
+                                translateY: [0, -100],
                                 duration: 500,
                                 easing: "easeInOutQuad",
                                 complete: function(anim) {
