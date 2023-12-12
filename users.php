@@ -7,15 +7,15 @@ include "view-header.php";
 
 if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
-    case "Add":
-      if (insertUser($_POST['uName'], $_POST['uPassword'])) {
+        case "Add":
+            if (insertUser($_POST['uName'], $_POST['uPassword'])) {
                 echo '<script>
                         Swal.fire({
                             icon: "success",
                             title: "User Created!",
                             showConfirmButton: false,
                             timer: 1500
-                        }).    then(function() {
+                        }).then(function() {
                             location.reload(); // Refresh the page or do any other action
                         });
                       </script>';
@@ -23,15 +23,19 @@ if (isset($_POST['actionType'])) {
             }
             break;
         case "Edit":
-      if (updateUser($_POST['uName'], $_POST['uPassword'], $_POST['uid'])) {
-          echo '<div class="alert alert-success" role="alert"> User Edited </div>';
-        } 
-        break;
-    case "Delete":
-      if (deleteUser($_POST['uid'])) {
-          echo '<div class="alert alert-success" role="alert"> User deleted </div>';
-        } 
-        break;
+            if (updateUser($_POST['uName'], $_POST['uPassword'], $_POST['uid'])) {
+                echo '<div class="alert alert-success" role="alert"> User Edited </div>';
+            } else {
+                echo '<div class="alert alert-danger" role="alert"> User edit failed </div>';
+            }
+            break;
+        case "Delete":
+            if (deleteUser($_POST['uid'])) {
+                echo '<div class="alert alert-success" role="alert"> User deleted </div>';
+            } else {
+                echo '<div class="alert alert-danger" role="alert"> User deletion failed </div>';
+            }
+            break;
     }
 }
 
