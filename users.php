@@ -9,7 +9,12 @@ if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
         case "Add":
             if (insertUser($_POST['uName'], $_POST['uPassword'])) {
-               echo '<div class="alert alert-success" role="alert"> Task added </div>';
+               echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                        User added
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>';
             }
             break;
         case "Edit":
