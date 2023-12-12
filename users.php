@@ -10,15 +10,11 @@ if (isset($_POST['actionType'])) {
         case "Add":
             if (insertUser($_POST['uName'], $_POST['uPassword'])) {
                 echo '<script>
-                        Swal.fire({
-                            icon: "success",
-                            title: "User Created!",
-                            showConfirmButton: false,
-                            timer: 1500
-                        }).then(function() {
-                            location.reload(); // Refresh the page or do any other action
-                        });
-                      </script>';
+                    toastr.success("User Created!");
+                    setTimeout(function() {
+                        location.reload(); // Refresh the page or perform other actions
+                    }, 1500);
+                    </script>';
                 echo '<input type="hidden" name="formSubmitted" value="true">';
             }
             break;
