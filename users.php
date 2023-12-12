@@ -31,7 +31,7 @@ if (isset($_POST['actionType'])) {
                             anime({
                                 targets: ".popup",
                                 opacity: [1, 0],
-                                translateY: [0, -100],
+                                translateY: [100, 0],
                                 duration: 500,
                                 easing: "easeInOutQuad",
                                 complete: function(anim) {
