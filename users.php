@@ -9,13 +9,7 @@ if (isset($_POST['actionType'])) {
     switch ($_POST['actionType']) {
         case "Add":
             if (insertUser($_POST['uName'], $_POST['uPassword'])) {
-                echo '<script>
-                    toastr.success("User Created!");
-                    setTimeout(function() {
-                        location.reload(); // Refresh the page or perform other actions
-                    }, 1500);
-                    </script>';
-                echo '<input type="hidden" name="formSubmitted" value="true">';
+               echo '<div class="alert alert-success" role="alert"> Task added </div>';
             }
             break;
         case "Edit":
