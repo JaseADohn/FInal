@@ -11,6 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.0"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <script src="path/to/toastr.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <style>
         .navbar {
             background-color: #ffcc00;
