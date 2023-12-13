@@ -92,4 +92,19 @@
                             easing: 'easeInOutQuad' 
                                 });
                 }
+    function openEditTaskModal(taskId) {
+        var taskName = "<?php echo $task['task_name']; ?>";
+        var taskDescription = "<?php echo $task['description']; ?>";
+        var taskPriority = "<?php echo $task['priority']; ?>";
+
+        document.getElementById('editTaskModalLabel').innerText = 'Edit Task';
+        document.getElementById('taskName').value = taskName;
+        document.getElementById('taskDescription').value = taskDescription;
+        document.getElementById('taskPriority').value = taskPriority;
+        document.getElementById('tid').value = taskId;
+
+        $('#editTaskModal').modal({
+            backdrop: false
+        });
+    }
 </script>
