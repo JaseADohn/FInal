@@ -47,7 +47,7 @@ function updateTask($tName, $desc, $prio, $uid) {
     try {
         $conn = get_db_connection();
         $stmt = $conn->prepare("UPDATE `task` SET `task_name` = ?, `description` = ?, `priority` = ?, `user_id` = ? WHERE `task_id` = ?");
-        $stmt->bind_param("ssiii", $tName, $desc, $prio, $uid);
+        $stmt->bind_param("ssii", $tName, $desc, $prio, $uid);
         $success = $stmt->execute();
         $conn->close();
         return $success;
