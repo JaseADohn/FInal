@@ -92,7 +92,7 @@
                             easing: 'easeInOutQuad' 
                                 });
                 }
-    function openEditTaskModal(taskId) {
+    function EditTaskModal(taskId) {
         var taskName = "<?php echo $task['task_name']; ?>";
         var taskDescription = "<?php echo $task['description']; ?>";
         var taskPriority = "<?php echo $task['priority']; ?>";
