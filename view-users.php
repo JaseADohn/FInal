@@ -58,7 +58,7 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <?php while ($user = $users->fetch_assoc()) { ?>
         <div class="col">
-            <div class="card hover-card" style="width: 18rem; margin-bottom: 20px;" onmouseover="animateCard(this, 1.1)" onmouseout="animateCard(this, 1)">
+            <div class="card hover-card" style="width: 18rem; margin-bottom: 20px;" onmouseover="CardAnimation(this, 1.1)" onmouseout="CardAnimation(this, 1)">
                 <div class="card-body">
                     <h5 class="card-title">User ID: <?php echo $user['user_id']; ?></h5>
                     <h6 class="card-subtitle mb-2 text-muted">Username: <?php echo $user['username']; ?></h6>
@@ -69,7 +69,7 @@
                         <?php include "view-user-editform.php"; ?>
                     </div>
                     
-                    <form method="post" action="" onsubmit="return confirmDelete();">
+                    <form method="post" action="" onsubmit="return DeleteConfirmation();">
                         <input type="hidden" name="uid" value="<?php echo $user['user_id']; ?>">
                         <input type="hidden" name="actionType" value="Delete">
                         <button type="submit" class="btn btn-danger btn-lg">
@@ -88,7 +88,7 @@
 
 <script>
 
-    function animateCard(card, scale) {
+    function CardAnimation(card, scale) {
             anime({
                 targets: card,
                 scale: scale,
@@ -97,7 +97,7 @@
             });
                     }
     
-    function openEditModal(userId) {
+    function EditModal(userId) {
         var userName = "<?php echo $user['username']; ?>";
         var userPassword = "<?php echo $user['password']; ?>";
 
@@ -111,7 +111,7 @@
         });
     }
 
-   function confirmDelete() {
+   function DeleteConfirmation() {
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
