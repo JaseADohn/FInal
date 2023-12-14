@@ -56,7 +56,7 @@
 <div class="row row-cols-1 g-4">
     <?php while ($task = $tasks->fetch_assoc()) { ?>
         <div class="col">
-            <div class="card custom-card" onmouseover="animateCard(this, 1.1)" onmouseout="animateCard(this, 1)">
+            <div class="card custom-card" onmouseover="CardAnimation(this, 1.1)" onmouseout="CardAnimation(this, 1)">
                 <div class="card-body">
                     <h5 class="card-title">Task ID: <?php echo $task['task_id']; ?></h5>
                     <h6 class="card-subtitle mb-2 text-muted">Name: <?php echo $task['task_name']; ?></h6>
@@ -84,7 +84,7 @@
 </div>
 
 <script>
-     function animateCard(card, scale) {
+     function CardAnimation(card, scale) {
                         anime({
                             targets: card,
                             scale: scale, 
